@@ -18,13 +18,14 @@ jobs:
           distribution: temurin
           java-version: 21
 
-      - name: Instalar Gradle
-        uses: gradle/actions/setup-gradle@v4
-        with:
-          gradle-version: 8.10
+      - name: Descargar Gradle 8.10
+        run: |
+          wget -q https://services.gradle.org/distributions/gradle-8.10-bin.zip -O /tmp/gradle.zip
+          unzip -q /tmp/gradle.zip -d /opt
+          /opt/gradle-8.10/bin/gradle --version
 
       - name: Compilar el mod
-        run: gradle build
+        run: /opt/gradle-8.10/bin/gradle build --no-daemon
 
       - name: Subir el .jar
         uses: actions/upload-artifact@v4
