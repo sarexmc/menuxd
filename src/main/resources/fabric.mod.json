@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "sarexsafio4",
+  "version": "${version}",
+  "name": "Sarexsafio 4 - Menú de pausa",
+  "description": "Menú de pausa personalizado de Sarexsafio 4 por Sarex Studio.",
+  "authors": ["Sarex Studio"],
+  "license": "All-Rights-Reserved",
+  "icon": "assets/sarexsafio4/icon.png",
+  "environment": "client",
+  "mixins": ["sarexsafio4.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.15.11",
+    "minecraft": "1.21.1",
+    "java": ">=21"
+  }
+}
